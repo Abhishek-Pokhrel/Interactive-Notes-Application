@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+.sideBar{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid black; */
+    position: fixed;
+    top: 0;
+    left: 52px;
+    bottom: 0;
+    gap: 150px;
+}
+
+.infos{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid black; */
+    gap: 20px;
+}
+
+.infos .title{
+    font-size: 40px;
+    font-family: Roboto;
+    font-weight: 700;
+    color: #5F5F5F;
+    line-height: 58px;
+    font-style: normal;
+    
+}
+
+.infos .subTitle{
+    font-size: 16px;
+    color: #CA6363;
+    font-family: Roboto;
+    font-weight: 500;
+    line-height: 24px;
+    font-style: normal;
+}
+
+.inputFields{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.inputFields .titleInput{
+    width: 377px;
+    height: 60px;
+    background: #DF7E7E;
+    border: none;
+    padding: 0px 15px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 39px;
+    color: white;
+}
+.titleInput::placeholder{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 39px;
+    font-family: Roboto;
+    color: white;
+}
+
+.inputFields textarea{
+    border: 3px solid #DF7E7E;
+    width: 377px;
+    height: 219px;
+    resize: none;
+    padding: 10px 10px;
+    font-family: Roboto;
+    font-size: 18px;
+}
+
+.inputFields textarea:focus{
+    outline: none;
+}
+
+.inputFields .addNote{
+    padding: 20px 40px;
+    background: #5F5F5F;
+    border: none;
+    font-family: Roboto;
+    font-weight: 500;
+    width: 150px;
+    cursor: pointer;
+    border-radius: 2px;
+    white-space: nowrap;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 22px;
+    line-height: 40px;
+}
+
+
+/* Error Box */
+.errorBox{
+    background-color: #5F5F5F;
+    color: rgb(255, 255, 255);
+    font-family: Inter;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+    width: 300px;
+    border-radius: 3px;
+    position: fixed;
+    left: 45%;
+    top: 4%;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+    display: none;
+    z-index: 5000;
+}
+
+/* Notes */
+.notes{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 400px 400px;
+    /* justify-content: space-around; */
+    width: 68%;
+    /* border: 1px solid black; */
+    position: fixed;
+    top: 3%;
+    left: 35%;
+    column-gap: 40px;
+    row-gap: -100px;
+    overflow: auto;
+    padding-bottom: 10px;
+    z-index: 500;
+
+}
+
+
+
+.note{
+    width: 400px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    background: #E9E9E9;
+    gap: 50px;
+    border-radius: 4px;
+    align-items: center;
+    margin-bottom: 40px;
+    z-index: 500;
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.note .noteHeader{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.note .noteHeader .noteTitle{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 36px;
+    cursor: default;
+}
+
+.note .noteHeader .noteBtns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+}
+
+.note .noteHeader .noteBtns button{
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+}
+
+
+.note .noteContent{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+    width: 347px;
+    padding: 10px;
+    resize: none;
+    outline: none;
+    border: none;
+    background: none;
+    cursor: text;
+}
+
+.note .noteDate{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #5F5F5F;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+    cursor: default;
+}
+
+
+/* Edit Container */
+.editBox{
+    width: 400px;
+    height: 420px;
+    background: #C2C2C2;
+    position: fixed;
+    top: 20%;
+    left: 41%;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 1000;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.editBox input{
+    width: 350px;
+    height: 60px;
+    padding: 5px 20px;
+    font-family: Inter;
+    font-size: 25px;
+    font-weight: 500;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+}
+
+.editBox textarea{
+    width: 350px;
+    height: 240px;
+    resize: none;
+    border: none;
+    border-radius: 3px;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 20px;
+    outline: none;
+}
+
+.editBox .editDone{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: #00AA63;
+    border-radius: 100px;
+    padding: 11px;
+    cursor: pointer;
+}
+
+.removeEditButton{
+    padding: 4px;
+    background-color: #F25959;
+    border: 2px solid black;
+    /* border: none; */
+    border-radius: 100px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    cursor: pointer;
+
+}
